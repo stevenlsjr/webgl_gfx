@@ -551,6 +551,11 @@ impl<B: hal::Backend> Renderer<B> {
       frame: 0,
     })
   }
+
+  pub fn render(&mut self) {}
+  pub fn recreate_swapchain(&mut self, dims: window::Extent2D) -> Result<(), failure::Error> {
+    Ok(())
+  }
 }
 
 impl<B> Drop for Renderer<B>
